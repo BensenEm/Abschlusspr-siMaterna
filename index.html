@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+	  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+	  @import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+
+
+	:root {
+		--light-blue: #3391FF;
+		--med-blue: #1A4980;
+		--dark-blue: #061220;
+		--light-grey: #9B9D9E;
+		--med-grey: #58595A;
+		--dark-grey: #2C2D2D;
+		--dark-blue-trans: rgba(6,18,32,0.7);
+		--img-shadow: 4px 0px 8px 1px rgba;
+	}
+	body { 
+		font-family: 'Open Sans', sans-serif;
+	}
+	
+	h1, h2, h3 {
+		display: inline;
+		font-family: 'Lora', serif;
+		font-weight: bold;
+		border-radius: 10px;
+		border-top-left-radius: 0px;
+		
+	}
+	h1 {
+		color: var(--light-blue);
+		padding: .2em;
+		background: var(--dark-grey);
+		margin-top: 0 ;
+	}
+	
+	h3 {
+		color: var(--light-blue);
+	  	background-color: var(--dark-grey);
+		padding: .2em;
+		transition: padding 2s;
+		margin-bottom: 2em;
+		
+	}
+	h3:hover,h1:hover{
+		padding: .35em;
+	  }
+	.titleslide{
+		background-image: url(beton2.jpg);
+		background-color: white;
+		background-size:cover;
+		z-index:-1;
+	}
+	.standardslide{
+		background-image: url(grey.jpg);
+		background-color: white;
+		background-size: 100% 100%;
+	}
+	.main{
+		background-color:rgba(255,255,255,.5);
+		margin-bottom:1em;
+		padding:.3em;
+		border-left:.7em solid var(--dark-grey);
+	}
+	
+	.imageslide{
+		background-size: 90%;
+		background-color: white;
+	}
+	.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+		
+	.remark-slide-content{		
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	
+	.highlight { 
+		line-height: 1.5em;
+		font-family: 'Open sans';
+		font-style: italic;
+		padding-left: 1em;
+		padding-right: 5em;
+	    z-index; 2;
+		border-left: 3px solid var(--light-blue);
+	}
+	
+	.cap{
+		color: #bbb;
+	}
+	.hololens{
+		background-image: url(hololens.jpg);
+		background-radius:20px;
+	}
+	.dude {
+		display: block;
+		height: 100px;
+		background: url(dude.svg);
+		background-size: 100px 100px;
+		background-repeat: no-repeat;
+	}
+	.h3wrapper{
+		display:inline-block;
+		background-color:blue;
+		padding:2em;
+		transform:rotate(5deg);
+	}
+	.f5wrapper{
+		display:flex;
+		height:100%;
+		align-items:center;
+	}
+	.f5subwrapper{
+		background-color:rgba(255,255,255,.5);
+		box-sizing:border-box;
+		margin-bottom:3em;
+		padding:1em;
+		border-left:.7em solid var(--dark-grey);
+	}
+	
+	 
+
+
+	  
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: middle, center, titleslide
+
+<div width="100%" style="positionbackground-color:var(--dark-grey)">
+	<h1> Abschlusspräsentation</h1><br><br>
+</div>
+### Augmented Reality Showcase
+
+---
+
+class: standardslide
+### Idee
+.main[
+* Neue Technologien probieren
+* Kombinieren mit neuen FirstSprit Möglichkeiten (CaaS)
+* Gewinnen von Kunden
+]
+--
+class: standardslide
+
+###Technolgien
+.main[
+**Software**
+* FirstSpirit, Content As A Service
+* Augmented Reality 
+* Voice Recognition
+
+**Hardware**
+* AR Brille (kein 3D/ Virtual Reality)
+]
+---
+class: standardslide
+
+### Anwendungsszenarien
+.main[
+Für die Entwicklung der Anwendungsszenarien wurde ein Brainstorming durchgeführt. 
+Im Ergebnis entstanden 3 potentiell interessante Usecases.
+1. Mitarbeiter Vertrieb
+2. Mitarbeiter Service
+3. Kunde
+]
+
+---
+class: standardslide
+
+### Szenario Kunde
+.f5wrapper[.main[
+Kunde geht zum Fahrzeug. Ein Interface wird eingeblendet.<br>
+Interface bleibt am Fahrzeug 'haften'.<br>
+Kunde kann via Sprache oder Fernbedienung innerhalb des Interfaces navigieren.<br>
+Fahrzeugdaten werden via CaaS abgerufen und aktualisiert.<br>
+Kunde bekommt Fahrzeugdaten (statisch und dynamisch), Videos/ Bilder  angezeigt.<br>
+Kleine Animationen verbessern das Erlebnis.<br>
+]]
+
+---
+class: titleslide, middle, center
+#Projektverlauf / Historie
+---
+class: standardslide
+
+### Einarbeitung 
+.main[
+   * Android, FirstSpirit & CaaS. 
+]
+--
+class: standardslide
+
+### .cap[TestApp:] CaaS
+.main[
+* Stellt Einzelrequest an Caas
+* bekommt Bild als Zeichenkette zurück.
+]
+--
+class: standardslide
+
+### Ankunft Vuzix 
+.main[
+* Leichte Enttäuschung bei allen Beteiligten
+* Near Eye*Microdisplay/Visual Assistant* anstatt *Optical See Through*.
+* Gleich Probleme bei der Anbindung an das Vuzix SDK.
+* Wenig/ Schlechter Support.
+]
+---
+class: standardslide
+
+### Recherche Alternativen
+.main[
+* Preisrange von USD 200 bis ca USD 4000
+* Qualitätskriterien
+* Field Of View, Displaytyp, Leistung, Tethering, Gewicht, Support, Verfügbarkeit
+* AR Brillen:
+   * Hololens, Microsoft
+   * Meta2, Meta
+   * ODG R7
+   * Epson Moverio BT300  
+   * ShimaLaforge
+   
+* VR Brillen:
+   * Oculus Rift, HTC Vive, Google Daydream, Sony Playstation VR
+]
+---
+class: middle, center, standardslide
+<img src="hololens.jpg" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)" />
+---
+class: middle, center, standardslide
+<img src="meta.jpg" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)"/>
+---
+class: middle, center, standardslide
+<img src="odg.jpg" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)"/>
+---
+class: middle, center, standardslide
+<img src="Laforge.png" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)" />
+---
+class: standardslide
+### Entscheidung für Epson Moverio BT300
+.main[
+* See Through Display
+* Preis aktzeptabel
+* Epson relativ etabliert und zu Support fähig
+]   
+--
+class: standardslide
+
+### .cap[TestApp:] Basics.
+.main[
+* Bilder, Text und Video. 
+* Menüleiste mit Icons
+* Fragments. 
+]
+--
+class: standardslide
+
+### .cap[TestApp:] Listen
+.main[
+* Recyclerview
+]
+---
+class: standardslide
+
+### Ankunft Epson Moverio
+.main[
+* Erster Eindruck: deutlich besser als bei Vuzix. Interessantes Bild.
+* Schärfegrad an den Rändern des Displays je nach Träger unterschiedlich.
+* Testen erster Apps hinterlässt ordentlichen Eindruck.
+]
+---
+class: standardslide
+### .cap[TestApp:] Objekterkennung
+.main[
+* Erste Runde: QR Codes
+* Recherche alternativer QR Codes:
+   * Facebook Messenger, Snapchat, Qrhacker
+* Aber: QR Codes auf große Distanz kaum Trackbar und wenn dann nur indem man riesige Codes verwendet. Visuell wenig ansprechend   * Zweite Runde: Imagetracking
+   * Komplexe Bilder, kontrastreich, flach, glanzfrei
+   * Verwendungsidee: Banner der im Showroom hinter dem Fahrzeug steht dient der Erkennung.
+* Dritte Runde: Objekterkennung. Ausstehend.
+]
+<div style="height:20%;display:flex;flex-direction:row;justify-content:space-around;">
+		<img src="snapchat_qr.png" style="width:150px;object-fit:contain;"/>
+		<img src="facebook_qr.png" style="width:150px;object-fit:contain;"/>
+		<img src="qr_unknown.png" style="width:150px;object-fit:scale-down;"/>
+</div>
+
+---
+class: standardslide
+### CaasAbfrage Komponente.
+.main[
+* Rico fügt Komponente hinzu.
+]
+--
+class: standardslide
+<h3>Recherche AR Frameworks</h3>
+.main[
+* EasyAR - ausreichend, kostenlos
+* Vuforia - top, kostenpflichtig oder branding
+* ARToolKit, Kudan, Wikitude - noch nicht ausführlich recherchiert.
+]
+--
+class: standardslide
+<h3>.cap[TestApp:] AR Framework.</h3>
+.main[
+* EasyAR. Leichte Einbindung. Kostenlos. Verschiedene Beispiele. Performance ok.
+* Vuforia. Zwar besser/ schneller aber nicht ohne Wasserzeichen kostenlos erhältlich.
+]
+---
+class: standardslide
+### .cap[TestApp:] Button Animation.
+.main[
+* Idee: Auswahl von Buttons durch hinschauen/ bewegen. 
+* Dann Auslösen einer Animation die den Auswahlprozess signalisiert 
+* Leider am Ende keine Verwendung im Projekt.
+* ***Problem***: erste schwere Unterschiede zwischen Brille und Smartphone.
+* Buttonhovereffekte auf Telefon funktional, auf Brille fehlerhaft. Umständlicher Umbau.  Verdoppelung von Code, zunehmende komplexität die normalerweise unnötig gewesen wäre
+]
+--
+
+class: standardslide
+<h3>.cap[TestApp:] Sprachsteuerungsmodul von RB.</h3>
+.main[
+* Funktioniert in Dresden.
+]
+---
+class: standardslide
+### .cap[ShowcaseApp:] Teaser
+ .main[
+*Design Überlappungen. Eigentlich von Android nicht vorgesehen/ bzw. nicht sauber umzusetzen (negative Margins). Neg. Margins werden nur in bestimmten Viewklassen verwendet. Erfahrung: Zuerst rausfinden ob alles grundsätzlich umsetzbar ist, dann erst mit implementierung anfangen... *
+* Teaser Designumsetzung. Erstes Design.
+* Teaser Einblendung und sticky
+* ***Herausforderung*** : Umwandeln von Bildtrackingdaten in Bildschirmpositionen
+    3x4 Matrix  --> x,y Koordinaten
+]
+---
+class: standardslide
+### .cap[ShowcaseApp:] Main Screen
+.main[
+* Main Screen Designumsetzung Erstes Design.
+* Einbinden von Video.
+* Einbinden von CaaS Daten
+* ***Herausforderung***: Caas Polling in seiner ursprünglichen Implementierung nur Anroid 5 kompatibel (für Brille), in Android 7 Schwierigkeiten und neuimplementierung notwendig.
+* Einbinden von statischen Daten (DataBinding).
+* Buttons
+]
+---
+class: standardslide
+### .cap[ShowcaseApp:]  CaaS Update
+.main[
+* Visualisierung von Update
+* Animationen von Vektorgrafiken
+]
+--
+
+class: standardslide
+<h3>.cap[ShowcaseApp:] Animation Video Screen</h3>
+.main[
+* Fullscreen Video inklusive Mediacontroller.
+]
+---
+
+class: standardslide
+### .cap[TestApp:] Sprachsteurung auf Brille.
+.main[
+* Funktioniert nicht. 
+* Fehler meldet dass Audiokanal belegt ist. In Wahrheit hat die Software kein Zugriff auf das Mikrofon. Unterschiedliche Handhabe von Berechtigungen führte zu verstecktem Fehler unter Android 7.
+* Hinzu kommt ein kaputtes Mikro vom mitgelieferten Headset.
+* Zum Glück wird Fehler vor Versand gefunden. 
+]
+---
+class: standardslide
+### Zunehmende Schwierigkeiten mit Brille. 
+.main[
+* Grünstich immer deutlicher
+* Transparenzen verhalten sich unerwartet. 
+* WLAN Login Problematisch
+* Mikro fehlerhaft
+
+     => Entscheidung: **Brille wird eingesendet**.
+]
+---
+class: standardslide
+### Arbeit wird auf Smartphone fortgesetzt.
+.main[
+* Plötzlich sieht Design anders aus.
+* Unterschiedliche Bildschirmauflösungen bei Android zwar normal, aber bisher nicht vorgesehen gewesen.
+* Unterschiedliche Pixeldichten
+* Keine Pixeldichte auf Brille angegeben. Kein Testen möglich. 
+]
+---
+class: standardslide
+### Zweiter Designentwurf. 
+.main[
+* Umsetzung Teaser
+* Umsetzung Main Screen
+* VideoScreen Unverändert
+]
+--
+
+class: standardslide
+<h3> Transitionen. Animationen.</h3>
+.main[    * FadeIn/ FadeOut Teaser
+* FadeIn, Slides Main Screen]
+---
+class: titleslide, middle, center
+# Showcase Demo
+---
+class: middle, center, standardslide
+<img src="Central_second.png" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)"/>
+
+		
+---
+class: titleslide, middle, center
+
+#Zukunft
+---
+class: standardslide
+
+### Themen
+.main[
+1. Menünavigation/ Eigeninteraktion
+2. Anbindung Commedia
+3. Online Sprachsteuerung
+4. Verwendung besserer AR Tools/Frameworks
+5. Auswahl durch Fokussieren
+6. Verschiedene Fahrzeuge in Abhängigkeit vom Tracking Image
+7. 3D Objekte tracken
+8. Details Screen ... umsetzen
+]
+---
+class: titleslide, middle, center
+# Vielen Dank!
+[logo]: lambo.jpg "Gelber Lambo"
+[central2]: Central_second.png "Second Design"
+[central1]: Central_first.png "First Design"
+[fb_qr]: facebook_qr.png "FB QR"
+[snap_qr]: snapchat_qr.png "Snap QR"
+[holo]: hololens.jpg "Hololens"
+[meta]: meta.jpg "Meta 2"
+[odg]: odg.jpg "ODG 7"
+[laforge]: Laforge.png "Laforge"
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create( );
+	  
+    </script>
+  </body>
+</html>
