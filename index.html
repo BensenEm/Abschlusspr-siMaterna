@@ -28,6 +28,8 @@
 		font-weight: bold;
 		border-radius: 10px;
 		border-top-left-radius: 0px;
+		transition: padding 2s;
+
 
 	}
 	h1 {
@@ -221,30 +223,42 @@ class: standardslide
 * AR Brillen:
   * Hololens, Microsoft
   * Meta2, Meta
-  * ODG R7
-  * Epson Moverio BT300
-  * ShimaLaforge
+  * R7, ODG
+  * Moverio BT300, Epson
+  * Shima, Laforge
 
 * VR Brillen:
   * Oculus Rift, HTC Vive, Google Daydream, Sony Playstation VR
 
-* Preisrange von USD 200 bis ca USD 4000
+* Preisrange von USD 600 bis etwa USD 4000
 * Qualitätskriterien
    * Field Of View, Displaytyp, Leistung, Tethering, Gewicht, Support, Verfügbarkeit
 
 ]
 ---
-class: middle, center, standardslide
+class:standardslide
+<h3>Hololens, Microsoft</h3><br>
+.middle[.center[
 <img src="hololens.jpg" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)" />
+]]
 ---
-class: middle, center, standardslide
+class:standardslide
+<h3>Meta 2, Meta</h3><br>
+.middle[.center[
 <img src="meta.jpg" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)"/>
+]]
 ---
-class: middle, center, standardslide
+class:standardslide
+<h3>R7, ODG</h3><br>
+.middle[.center[
 <img src="odg.jpg" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)"/>
+]]
 ---
-class: middle, center, standardslide
+class:standardslide
+<h3>Shima, Laforge</h3><br>
+.middle[.center[
 <img src="Laforge.png" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)" />
+]]
 ---
 class: standardslide
 ### Entscheidung für Epson Moverio BT300
@@ -333,7 +347,11 @@ class: standardslide
 * ***Problem***: erste schwere Unterschiede zwischen Brille und Smartphone.
 * Buttonhovereffekte auf Telefon funktional, auf Brille fehlerhaft. Umständlicher Umbau.  Verdoppelung von Code, zunehmende komplexität die normalerweise unnötig gewesen wäre
 ]
---
+<div style="width:70%;margin:3em auto;display:flex;flex-direction:row;justify-content:space-between;">
+		<img src="button1.PNG" style="height:200px;object-fit:contain;border-radius:10px"/>
+		<img src="button2.PNG" style="height:200px;object-fit:contain;border-radius:10px"/>
+</div>
+---
 
 class: standardslide
 <h3>.cap[TestApp:] Sprachsteuerungsmodul von RB.</h3>
@@ -341,24 +359,29 @@ class: standardslide
 * Pocket Sphinx
 * funktional auch offline
 * basierend auf englischem dictionary/ Wörterbuch
-
 ]
 ---
-class: middle, center, standardslide
-<img src="teaser.png" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)" />
+class:  standardslide
+<h3>Teaser</h3><br>
+.middle[.center[
+<img src="teaser.png" style="margin-top:3em;border-radius:10px;width:400px;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)" />
+]]
 ---
 class: standardslide
 ### .cap[ShowcaseApp:] Teaser
  .main[
-*Design Überlappungen. Eigentlich von Android nicht vorgesehen/ bzw. nicht sauber umzusetzen (negative Margins). Neg. Margins werden nur in bestimmten Viewklassen verwendet. Erfahrung: Zuerst rausfinden ob alles grundsätzlich umsetzbar ist, dann erst mit implementierung anfangen... *
 * Teaser Designumsetzung. Erstes Design.
 * Teaser Einblendung und sticky
 * ***Herausforderung*** : Umwandeln von Bildtrackingdaten in Bildschirmpositionen
     3x4 Matrix  --> x,y Koordinaten
+* ***Herausforderung*** : Überlappung von Views umständlicher als gedacht.
 ]
 ---
-class: middle, center, standardslide
+class:  standardslide
+<h3>Main Screen</h3><br>
+.middle[.center[
 <img src="Central_first.png" style="border-radius:10px;width:100%;box-shadow:4px 0px 8px 1px rgba(0, 0, 0, 0.3)" />
+]]
 ---
 class: standardslide
 ### .cap[ShowcaseApp:] Main Screen
@@ -366,7 +389,7 @@ class: standardslide
 * Main Screen Designumsetzung Erstes Design.
 * Einbinden von Video.
 * Einbinden von CaaS Daten
-* ***Herausforderung***: Caas Polling in seiner ursprünglichen Implementierung nur Anroid 5 kompatibel (für Brille), in Android 7 Schwierigkeiten und neuimplementierung notwendig.
+* ***Herausforderung***: Caas Polling in seiner ursprünglichen Implementierung nur Anroid 5 kompatibel (für Brille), in Android 7 Schwierigkeiten und Neuimplementierung notwendig.
 * Einbinden von statischen Daten (DataBinding).
 * Buttons
 ]
@@ -391,7 +414,7 @@ class: standardslide
 .main[
 * Funktioniert auf dem Smartphone. Aber nicht auf der Brille.
 * 2 Fehler gleichzeitig:
-  * Kapputes Mikro
+  * Kaputtes Mikro
   * Bei zwei Installationen hat eine die andere blockiert.
 * Wenn die App läuft blockiert sie den Audiokanal auch nach dem Schließen.
 ]
@@ -446,7 +469,7 @@ class: standardslide
 ### Zukünftige Themen
 .main[
 1. Menünavigation/ Eigeninteraktion
-2. Anbindung Coremedia
+2. Anbindung CoreMedia
 3. Online Sprachsteuerung
 4. Verwendung besserer AR Tools/Frameworks
 5. Auswahl durch Fokussieren
